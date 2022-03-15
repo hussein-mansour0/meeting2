@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+
+
+</head>
+
+<body>
+
+    <div id="app">
+        <div v-for="p in products" class="card-box">
+            <h1> {{ p.name}}</h1>
+            <h2> {{p.price}}</h2>
+        </div>
+    </div>
+
+    <script>
+        var app = Vue.createApp({
+            data() {
+                return {
+                    demo:false,
+                    products :[
+                        { name : 'hp' , price :'400$'},
+                        { name : 'lenovo' , price :'100$'},
+                        { name : 'acer' , price :'300$'},
+                        { name : 'mac' , price :'1400$'},
+                    ]
+                }
+            }
+        }).mount('#app')
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
